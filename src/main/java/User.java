@@ -1,3 +1,7 @@
+package src.main.java;
+
+import java.util.Objects;
+
 public class User {
     private String login;
     private String password;
@@ -23,7 +27,7 @@ public class User {
         this.password = password;
     }
 
-    @java.lang.Override
+    @Override
     public java.lang.String toString() {
         return "User{" +
                 "login='" + login + '\'' +
@@ -31,14 +35,14 @@ public class User {
                 '}';
     }
 
-    @java.lang.Override
+    @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
         return Objects.equals(login, user.login) && Objects.equals(password, user.password);
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
         return Objects.hash(login, password);
     }
